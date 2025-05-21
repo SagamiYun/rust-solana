@@ -1,0 +1,17 @@
+[package]
+name = "rust-solana"
+version = "0.1.0"
+edition = "2024"
+description = "A Solana program written in Rust"
+
+[dependencies]
+solana-program = "1.17.0"
+borsh = "0.10.3"
+borsh-derive = "0.10.3"
+thiserror = "1.0.47"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+no-entrypoint = [] 
