@@ -1,14 +1,24 @@
 [package]
 name = "rust-solana"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 description = "A Solana program written in Rust"
 
 [dependencies]
-solana-program = "=2.0.3"
+solana-program = "2.2.1"
+solana-sdk = "2.2.1"
+solana-client = "2.2.1"
+#thiserror = "1.0.30"
+#signature = "2.3.0-pre.7"
+#solana-program-runtime = "2.0.3"
+#solana_rbpf = "0.8.1"
 
 [lib]
 crate-type = ["cdylib", "lib"]
+
+[[bin]]
+name = "counter-client"
+path = "src/client.rs"
 
 [features]
 no-entrypoint = []
